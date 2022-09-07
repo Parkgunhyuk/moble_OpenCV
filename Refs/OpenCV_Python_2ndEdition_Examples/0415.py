@@ -1,6 +1,6 @@
 # 0415.py
 import cv2
-src = cv2.imread('./data/lena.jpg')
+src = cv2.imread('./data/ad.jpg')
 
 dst1 = cv2.rotate(src, cv2.ROTATE_90_CLOCKWISE)
 dst2 = cv2.rotate(src, cv2.ROTATE_90_COUNTERCLOCKWISE)

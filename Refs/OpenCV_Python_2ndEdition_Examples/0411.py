@@ -1,8 +1,10 @@
 # 0411.py
 import cv2
-src = cv2.imread('./data/lena.jpg')
+src = cv2.imread('./data/ad.jpg')
+src2 = cv2.resize(src,(500,500))
 
-dst = cv2.split(src) 
+
+dst = cv2.split(src2) 
 print(type(dst))
 print(type(dst[0])) # type(dst[1]), type(dst[2])
 

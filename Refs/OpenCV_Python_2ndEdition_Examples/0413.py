@@ -1,7 +1,7 @@
 # 0413.py
 import cv2
-src = cv2.imread('./data/lena.jpg')
-
+src2 = cv2.imread('./data/S2.jpg')
+src = cv2.resize(src2,(500,500))
 gray   = cv2.cvtColor(src, cv2.COLOR_BGR2GRAY)
 yCrCv = cv2.cvtColor(src, cv2.COLOR_BGR2YCrCb)
 hsv    = cv2.cvtColor(src, cv2.COLOR_BGR2HSV)

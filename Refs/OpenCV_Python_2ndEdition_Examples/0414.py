@@ -1,7 +1,7 @@
 # 0414.py
 import cv2
 import numpy as np
-src = cv2.imread('./data/lena.jpg', cv2.IMREAD_GRAYSCALE)
+src = cv2.imread('./data/psy.jpg', cv2.IMREAD_GRAYSCALE)
 
 dst = cv2.resize(src, dsize=(320, 240))
 dst2 = cv2.resize(src, dsize=(0,0), fx=1.5, fy=1.2)

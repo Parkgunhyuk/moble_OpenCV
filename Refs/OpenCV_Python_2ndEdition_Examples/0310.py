@@ -1,10 +1,13 @@
 #0310.py
 import numpy as np
 import cv2
+imageFile = './data/lena.jpg'
+img  = cv2.imread(imageFile) 
 
 width, height = 512, 512
 x, y, R = 256, 256, 50
-direction = 0 # right
+direction = 10 # right
+
 
 while True:   
     key = cv2.waitKeyEx(30)    
@@ -23,13 +26,13 @@ while True:
         
 # 방향으로 이동 
     if direction == 0:     # right
-        x += 10
+        x += 100
     elif direction == 1:   # down
-        y += 10
+        y += 100
     elif direction == 2:   # left
-        x -= 10
+        x -= 100
     else: # 3, up
-        y -= 10
+        y -= 100
         
 #   경계확인 
     if x < R:
@@ -46,8 +49,9 @@ while True:
         direction = 3
         
 # 지우고, 그리기        
-    img = np.zeros((width, height,3), np.uint8) + 255 # 지우기
-    cv2.circle(img, (x, y), R, (0, 0, 255), -1) 
+    #img = np.zeros((width, height,3), np.uint8) + 255 # 지우기
+    img  = cv2.imread(imageFile) 
+    cv2.circle(img, (x, y), R, (255, 255, 0), -1) 
     cv2.imshow('img', img)
     
 cv2.destroyAllWindows()
