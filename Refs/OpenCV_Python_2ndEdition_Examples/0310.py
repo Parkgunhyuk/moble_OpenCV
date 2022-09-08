@@ -2,7 +2,7 @@
 import numpy as np
 import cv2
 imageFile = './data/lena.jpg'
-img  = cv2.imread(imageFile) 
+img = cv2.imread(imageFile) 
 
 width, height = 512, 512
 x, y, R = 256, 256, 50
